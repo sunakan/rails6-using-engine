@@ -17,4 +17,4 @@ down:
 
 # make bash
 bash:
-	@$(DC) run -p 80:3000 --rm app bash
+	@$(DC) run --rm app bash
