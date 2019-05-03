@@ -8,9 +8,12 @@ services:
     volumes:
       - bundle_install:/app/vendor/bundle
 
-  app:
+  # ここでimage名を指定する理由
+  # webpackサービスで同じimageを使うことが可能になる
+  app: &app_base
     working_dir: /app
     command: ./startup.sh
+    image: rails6-using-engine_app
     build:
       context: .
       dockerfile: Dockerfile
@@ -24,6 +27,19 @@ services:
       - 80:3000
     links:
       - postgres
+    tty: true
+    stdin_open: true
+
+  webpack:
+    <<: *app_base
+    command: "bin/webpack-dev-server"
+    ports:
+      - 3035:3035
+    depends_on:
+      - app
+    tty: false
+    stdin_open: false
+
 
   postgres:
     image: postgres:11.2
