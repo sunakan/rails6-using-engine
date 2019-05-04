@@ -1,9 +1,10 @@
 GIT
   remote: https://github.com/sunakan/rails6-blog-engine.git
-  revision: c04b3045a7253014ef037c4de58a8ad42ce1c3af
+  revision: 5e445d766bd1547c6a4ea1da86b55a3b21e1cf60
   specs:
     blog_engine (0.1.0)
       rails (= 6.0.0.rc1)
+      webpacker (~> 4.0)
 
 GEM
   remote: https://rubygems.org/
