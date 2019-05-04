@@ -40,3 +40,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# 自作Engine
+gem 'blog_engine', git: 'https://github.com/sunakan/rails6-blog-engine.git'
