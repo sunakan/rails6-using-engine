@@ -19,5 +19,8 @@ down:
 bash:
 	@$(DC) run --rm app bash
 
+update:
+	@$(DC) run --rm app bundle update blog_engine
+
 deploy:
 	git push heroku `git rev-parse --abbrev-ref HEAD`:master
