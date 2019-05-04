@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/sunakan/rails6-blog-engine.git
+  revision: bffea1d8787d6d460034d42e82d258cb9bbc70c2
+  specs:
+    blog_engine (0.1.0)
+      rails (= 6.0.0.rc1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -177,6 +184,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  blog_engine!
   bootsnap (>= 1.4.2)
   byebug
   jbuilder (~> 2.5)
