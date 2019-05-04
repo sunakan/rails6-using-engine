@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/sunakan/rails6-blog-engine.git
-  revision: bffea1d8787d6d460034d42e82d258cb9bbc70c2
+  revision: 5edf65004365225d75e7add0b0c225dd8f52422a
   specs:
     blog_engine (0.1.0)
       rails (= 6.0.0.rc1)
