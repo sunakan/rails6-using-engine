@@ -1,1 +1,4 @@
 = engineを使ってみるだけのRails 6
+
+* localではOK
+* herokuでは未だ駄目(できることはやったつもり)
