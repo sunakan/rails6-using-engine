@@ -27,6 +27,7 @@ services:
       - 80:3000
     links:
       - postgres
+      - chrome
     tty: true
     stdin_open: true
 
@@ -40,7 +41,6 @@ services:
     tty: false
     stdin_open: false
 
-
   postgres:
     image: postgres:11.2
     environment:
@@ -48,6 +48,13 @@ services:
       - POSTGRES_PASSWORD=password
     ports:
       - 5432:5432
+
+  chrome:
+    container_name: chrome
+    image: selenium/standalone-chrome
+    #image: selenium/standalone-chrome-debug:3.141.59-gold
+    ports:
+      - 4444:4444
 
 volumes:
   bundle_install:
