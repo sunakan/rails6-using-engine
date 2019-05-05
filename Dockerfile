@@ -14,7 +14,7 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 RUN echo 'deb https://dl.yarnpkg.com/debian/ stable main' | tee /etc/apt/sources.list.d/yarn.list
 RUN apt-get update && \
-  apt-get install -y build-essential patch ruby-dev zlib1g-dev liblzma-dev libpq-dev postgresql-client nodejs yarn git
+  apt-get install -y build-essential patch ruby-dev zlib1g-dev liblzma-dev libpq-dev postgresql-client nodejs yarn git vim
 COPY Gemfile* ./
 RUN gem uninstall bundler && gem install bundler -N -v=1.17.3 && bundle install -j4 --path vendor/bundle
 COPY . ./

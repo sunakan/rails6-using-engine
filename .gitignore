@@ -441,3 +441,4 @@ tags
 # End of https://www.gitignore.io/api/vim,node,ruby,rails
 
 blog_engine
+public/blog_engine_packs
