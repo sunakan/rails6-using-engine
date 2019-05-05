@@ -31,5 +31,12 @@ module App
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # 実際本番環境となるとこっちが有用？
+    config.middleware.use(
+      Rack::Static,
+      urls: ["/#{BlogEngine.webpacker.config.public_output_path.basename}"],
+      root: BlogEngine.webpacker.config.public_path
+    )
   end
 end
