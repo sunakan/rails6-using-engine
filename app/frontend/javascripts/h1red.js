@@ -1,6 +1,5 @@
-window.onload = () => {
-  console.log("window.onload");
+window.addEventListener("load", () => {
   document.querySelectorAll("h1").forEach((h1) => {
-    h1.style.color = "red";
-  });
-};
+    h1.style.color = "red"
+  })
+})
