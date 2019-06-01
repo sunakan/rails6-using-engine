@@ -20,7 +20,7 @@ services:
       target: builder
     volumes:
       - .:/app
-      - bundle_install:/app/vendor/bundle
+      - ~/bundle_install:/app/vendor/bundle
     environment:
       - TZ=Asia/Tokyo
     ports:
