@@ -3,11 +3,6 @@
 version: "3.7"
 
 services:
-  datastore:
-    image: busybox
-    volumes:
-      - bundle_install:/app/vendor/bundle
-
   # ここでimage名を指定する理由
   # webpackサービスで同じimageを使うことが可能になる
   app: &app_base
@@ -55,7 +50,3 @@ services:
     #image: selenium/standalone-chrome-debug:3.141.59-gold
     ports:
       - 4444:4444
-
-volumes:
-  bundle_install:
-    driver: local
